@@ -1,0 +1,67 @@
+{
+  "name": "TripPlan",
+  "type": "object",
+  "properties": {
+    "from_location": {
+      "type": "string"
+    },
+    "to_location": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "budget_type": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "budget_amount": {
+      "type": "number"
+    },
+    "traveler_type": {
+      "type": "string",
+      "enum": [
+        "single",
+        "couple",
+        "family",
+        "friends",
+        "others"
+      ]
+    },
+    "traveler_count": {
+      "type": "number"
+    },
+    "interests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "travel_mode": {
+      "type": "string",
+      "enum": [
+        "flight",
+        "train",
+        "bus",
+        "car"
+      ]
+    },
+    "generated_plan": {
+      "type": "object",
+      "description": "AI generated plan JSON"
+    }
+  },
+  "required": [
+    "from_location",
+    "to_location"
+  ]
+}

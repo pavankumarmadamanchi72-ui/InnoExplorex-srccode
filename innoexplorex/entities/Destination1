@@ -1,0 +1,54 @@
+{
+  "name": "Destination",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the destination"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "hills",
+        "beaches",
+        "temples",
+        "heritage",
+        "wildlife",
+        "adventure"
+      ],
+      "description": "Category of destination"
+    },
+    "state": {
+      "type": "string",
+      "description": "State in India"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Main image URL"
+    },
+    "vr_video_url": {
+      "type": "string",
+      "description": "YouTube 360 video URL"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Average rating out of 5"
+    },
+    "best_time": {
+      "type": "string",
+      "description": "Best time to visit"
+    },
+    "budget_per_day": {
+      "type": "number",
+      "description": "Average budget per day in INR"
+    }
+  },
+  "required": [
+    "name",
+    "category"
+  ]
+}
